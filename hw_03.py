@@ -24,12 +24,9 @@ def get_birthdays_per_week(users):
         if next_week_start <= birthday <= next_week_end:
             birthday_weekday = birthday.weekday()
 
-            # Перевірка, чи день народження був у вихідні
             if birthday_weekday >= 5:
-                # Привітання у понеділок наступного тижня
                 birthdays['Monday'].append(user['name'])
             else:
-                # Привітання у відповідний день
                 birthday_name = birthday.strftime('%A')
                 birthdays[birthday_name].append(user['name'])
 
